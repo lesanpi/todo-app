@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 function TodoDate() {
   return (
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   dayBar: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal: 40,
     paddingVertical: 10,
   },
   dayMonthYear: {
