@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
   completed: {
     backgroundColor: '#62dca5',
     height: '100%',
-    width: '20%',
+    width: '50%',
     //borderTopLeftRadius: 20,
     //borderBottomLeftRadius: 20,
   },
   paused: {
     backgroundColor: '#f7f879',
     height: '100%',
-    width: '20%',
+    width: '25%',
     //borderTopRightRadius: 20,
     //borderBottomRightRadius: 20,
   },
