@@ -7,13 +7,7 @@ function Input() {
     <View style={styles.input}>
       <TextInput style={styles.textInput}></TextInput>
       <TouchableOpacity style={styles.sendButton}>
-        <Icon
-          name="plus"
-          size={30}
-          type="font-awesome"
-          color="#fff"
-          onPress={() => setExpanded(!expanded)}
-        />
+        <Icon name="plus" size={30} type="font-awesome" color="#fff" />
       </TouchableOpacity>
     </View>
   );
@@ -23,7 +17,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingVertical: 20,
     justifyContent: 'center',
-    height: 115,
+    height: 100,
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -37,10 +31,10 @@ const styles = StyleSheet.create({
     color: 'rgba(0,0,0,0.8)',
   },
   sendButton: {
-    width: 70,
+    width: 60,
     backgroundColor: 'rgba(0,0,0,0.8)',
     borderRadius: 10,
-    height: 70,
+    height: 60,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 10,

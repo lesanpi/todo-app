@@ -2,6 +2,7 @@ import React from 'react';
 import Item from './Item';
 import Accordian from './Accordian';
 import {StyleSheet, ScrollView} from 'react-native';
+import {useAppReducer, useItems} from '../AppContext';
 
 const itemExample = {
   text: 'Tarea nueva sin completar.',
@@ -24,8 +25,13 @@ function ItemsList() {
 
       <Accordian title="Paused">
         <Item item={itemPausedExample} />
+        <Item item={itemPausedExample} />
       </Accordian>
       <Accordian title="Completed">
+        <Item item={itemCompletedExample} />
+        <Item item={itemCompletedExample} />
+        <Item item={itemCompletedExample} />
+        <Item item={itemCompletedExample} />
         <Item item={itemCompletedExample} />
       </Accordian>
     </ScrollView>
@@ -36,7 +42,7 @@ const styles = StyleSheet.create({
   itemList: {
     paddingHorizontal: 40,
     paddingVertical: 10,
-    height: 390,
+    height: '65%',
   },
 });
 

@@ -1,17 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {useAppState} from '../AppContext';
 import {View, Text, StyleSheet} from 'react-native';
 
 function TodoDate() {
+  const {date} = useAppState();
+
   return (
     <View style={styles.dayBar}>
       <View style={styles.dayMonthYear}>
-        <Text style={styles.dayNumber}>9</Text>
+        <Text style={styles.dayNumber}>{date.dayDisplay}</Text>
         <View style={styles.monthYear}>
-          <Text style={styles.month}>Mar</Text>
-          <Text style={styles.year}>2020</Text>
+          <Text style={styles.month}>{date.monthDisplay}</Text>
+          <Text style={styles.year}>{date.year}</Text>
         </View>
       </View>
-      <Text style={styles.weekDay}>Monday</Text>
+      <Text style={styles.weekDay}>{date.weekday}</Text>
     </View>
   );
 }
