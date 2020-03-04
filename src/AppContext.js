@@ -1,7 +1,6 @@
 import React, {createContext, useContext, useReducer} from 'react';
 import {saveState, loadState} from './local-storage';
 import {format} from 'date-fns';
-import {View} from 'react-native';
 export const AppContext = createContext();
 
 export function useAppState() {

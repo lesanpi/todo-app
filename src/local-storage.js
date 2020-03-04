@@ -1,6 +1,8 @@
+//import AsyncStorage from '@react-native-community/async-storage';
+import {AsyncStorage} from 'react-native';
 export const loadState = () => {
   try {
-    const serializedState = localStorage.getItem('state');
+    const serializedState = AsyncStorage.getItem('state');
     if (serializedState === null) {
       return undefined;
     }
@@ -13,7 +15,7 @@ export const loadState = () => {
 export const saveState = state => {
   try {
     const serializedState = JSON.stringify(state);
-    localStorage.setItem('state', serializedState);
+    AsyncStorage.setItem('state', serializedState);
   } catch (err) {
     console.error(err);
   }

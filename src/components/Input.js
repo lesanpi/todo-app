@@ -1,12 +1,37 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import {View, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
+import {useAppReducer} from '../AppContext';
 
 function Input() {
+  const dispatch = useAppReducer();
+  //let inputRef = useRef();
+
+  const [value, onChangeText] = useState('');
+
+  function addItem() {
+    const newItem = {
+      text: value,
+      key: Date.now(),
+      status: 'pending',
+    };
+
+    dispatch({
+      type: 'ADD_ITEM',
+      item: newItem,
+    });
+
+    onChangeText('');
+  }
+
   return (
     <View style={styles.input}>
-      <TextInput style={styles.textInput}></TextInput>
-      <TouchableOpacity style={styles.sendButton}>
+      <TextInput
+        style={styles.textInput}
+        onChangeText={text => onChangeText(text)}
+        value={value}
+      />
+      <TouchableOpacity style={styles.sendButton} onPress={addItem}>
         <Icon name="plus" size={30} type="font-awesome" color="#fff" />
       </TouchableOpacity>
     </View>
