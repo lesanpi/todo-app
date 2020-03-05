@@ -9,7 +9,7 @@ function Progress() {
   const pausedAmount = paused.length;
 
   let completedPorcentage = completedAmount / totalAmount;
-  let pausedPorcentage = pausedAmount / totalAmount + completedPorcentage;
+  let pausedPorcentage = pausedAmount / totalAmount;
 
   if (isNaN(completedPorcentage)) {
     completedPorcentage = 0;
@@ -25,18 +25,15 @@ function Progress() {
           style={{
             backgroundColor: '#62dca5',
             height: '100%',
-            width: completedPorcentage,
+            width: `${completedPorcentage * 100}%`,
             borderTopLeftRadius: 10,
             borderBottomLeftRadius: 10,
-            borderTopRightRadius: 10,
-            borderBottomRightRadius: 10,
-          }}
-          ></View>
+          }}></View>
         <View
           style={{
             backgroundColor: '#f7f879',
             height: '100%',
-            width: pausedPorcentage,
+            width: `${pausedPorcentage * 100}%`,
             borderTopRightRadius: 10,
             borderBottomRightRadius: 10,
           }}></View>

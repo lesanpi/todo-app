@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   dayBar: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 40,
+    paddingLeft: 40,
+    paddingRight: 90,
     paddingTop: 20,
     paddingBottom: 10,
   },
